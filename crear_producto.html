@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e2e2e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input, textarea, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            background-color: #ff5733;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff784e;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Agregar Producto</h2>
+        <form action="crear_producto.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nombre" placeholder="Nombre del Producto" required>
+            <input type="number" step="0.01" name="precio" placeholder="Precio" required>
+            <textarea name="descripcion" placeholder="Descripción del Producto" rows="4" required></textarea>
+            <input type="file" name="imagen" accept="image/*" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+</body>
+</html>
